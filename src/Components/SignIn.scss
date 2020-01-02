@@ -1,0 +1,14 @@
+.SignIn {
+  width: 380px; // 30vw means 30% of the total view
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin: 10px 0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
