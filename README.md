@@ -1,3 +1,25 @@
+## Redux
+
+the store - holds all the application's states
+reducer - just a javascript function which take 2 params: current state and action
+Dispatching an action means sending out a signal to the store
+
+# Redux's most important methods: 
+getState - for reading the current state of the application
+dispatch - sending a signal (action) to the store
+subscribe - for listening on state changes
+
+# Redux with React
+connect - from react-redux library - connects a React component with the Redux store
+connect takes 2 to 3 arguments: 
+  - a mapStateToProps function (select) - connects a part of the Redux state to the props of a React component. By doing so a connected React component will have access to the exact part of the store it needs.
+  - a mapDispatchToProps function - connects Redux actions to React props. This way a connected React component will be able to send messages to the store.
+Provider - a high order component from react-redux. Provider wraps up React application (<App />) and makes it aware of the entire Redux's store.
+
+middleware - A Redux middleware is a function that is able to intercept, and act accordingly, our actions, before they reach the reducer. And while the theory is quite simple, a Redux middleware can look a bit confusing. In its basic form a Redux middleware is a function returning a function, which takes next as a parameter. Then the inner function returns another function which takes action as a parameter and finally returns next(action). 
+
+------------------------------------------------------------------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
