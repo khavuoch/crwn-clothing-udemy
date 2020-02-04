@@ -1,4 +1,4 @@
-import { createSelector } from 'reselect';
+import {createSelector} from "reselect";
 
 const selectCart = state => state.cart; // input selector
 
@@ -7,7 +7,12 @@ export const selectCartItems = createSelector(
     // These 2 arguments are ordered respectively to each other
     [selectCart], // array of input selector
     // a function that will return the value we want out of this selector
-    cart => cart.cartItems
+    (cart) => cart.cartItems
+);
+
+export const selectCartHidden = createSelector(
+    [selectCart],
+    cart => cart.hidden
 );
 
 export const selectCartItemsCount = createSelector(
