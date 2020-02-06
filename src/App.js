@@ -10,6 +10,7 @@ import {auth, createUserProfileDocument} from "./firebase/firebase.utils";
 import {setCurrentUser} from "./redux/user/userActions";
 import {createStructuredSelector} from "reselect";
 import {selectCurrentUser} from "./redux/user/UserSelectors";
+import CheckoutPage from "./Components/Checkout";
 
 class App extends React.Component {
 
@@ -47,6 +48,7 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path='/' component={HomePage}/> {/*exact is basically exact={true} */}
                     <Route path='/shop' component={ShopPage}/>
+                    <Route exact path='/checkout' component={CheckoutPage}/>
                     <Route
                         exact
                         path='/signin'
